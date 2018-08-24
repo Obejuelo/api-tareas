@@ -3,7 +3,7 @@ const app = express();
 
 const Tarea = require('../models/tareas');
 
-app.get('/tarea', (req, res) => {
+app.get('/tarea', (res) => {
 	Tarea.find((err, tareas) => {
 		if (err) {
 			return res.status(400).json({ err })
